@@ -5,5 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/TIC-TAC-TIE/',
   plugins: [react(), tailwindcss()],
 })
