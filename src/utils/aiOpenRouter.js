@@ -70,11 +70,11 @@ export const GetAimoveFromOpenRouter = async (board) => {
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
             headers: {
-                Authorization: `Bearer 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`,
+                Authorization: `Bearer ${import.meta.env.VITE_Deepseek_API_Secret_Key}`,
                 "Content-Type": 'application/json',
             },
             body: JSON.stringify({
-                // model: 'deepseek/deepseek-r1-0528:free',
+                model: 'deepseek/deepseek-r1-0528:free',
                 temperature: 0.2,
                 messages: [
                     { role: 'system', content: systemprompt }
