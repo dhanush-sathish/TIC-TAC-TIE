@@ -50,6 +50,12 @@ const App = () => {
       return;
     }
 
+    // Check for draw (board full, no winner)
+    if (!board.includes(null)) {
+      setWinner("Draw");
+      return;
+    }
+
     }
     // AI's turn
     if (!isPlayerTurn && !winner) {
